@@ -6,8 +6,8 @@ import './Grade.ts'
 
 function printStudentNameAndGrades(student :Student) : string {
   let nameAgeGrades : string = "";
-  nameAgeGrades = student.firstName + " " + student.lastName + " " + "(" + student.age + ")\n"
-      + "=".repeat(30)+ "\n" + "Grades: ";
+  nameAgeGrades = student.firstName + " " + student.lastName + " " + "(" + student.age + ")\n";
+    nameAgeGrades  += "=".repeat(nameAgeGrades.length)+ "\n" + "Grades: ";
   for(let i:number = 0; i<student.grades.length; i++){
     nameAgeGrades += student.grades[i];
     if(i<student.grades.length-1){
@@ -46,7 +46,7 @@ function App() {
     grades: grades1
   }
   const student2: Student = {
-    firstName: "Berta",
+    firstName: "Bertaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     lastName: "Müller",
     age: 17,
     grades:grades2
