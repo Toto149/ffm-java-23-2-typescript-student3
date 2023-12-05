@@ -37,19 +37,35 @@ function convertingStudentGrades(student:Student):void{
 }
 function App() {
   const grades1: Grade[] = [1,4,3,1,3,2,1,2];
-  const student:Student = {
+  const grades2: Grade[] = ["A","*",1];
+  const grades3: Grade[] = ["A","*",1,3,2,4,5];
+  const student1: Student = {
     firstName: "Anton",
     lastName: "Meier",
-    age : 17,
+    age : 16,
     grades: grades1
   }
-  convertingStudentGrades(student);
-  let output:string = printStudentNameAndGrades(student);
-  console.log(output)
+  const student2: Student = {
+    firstName: "Berta",
+    lastName: "Müller",
+    age: 17,
+    grades:grades2
+  }
+  const student3: Student = {
+    firstName: "Cäsar",
+    lastName: "Schmidt",
+    age: 17,
+    grades: grades3
+  }
+  const students: Student[] = [student1,student2,student3];
+  students.forEach((student: Student): void => console.log(printStudentNameAndGrades(student)));
+  convertingStudentGrades(student1);
+  let output1:string = printStudentNameAndGrades(student1);
+  console.log(output1)
   return (
     <>
       <pre>
-        {output}
+        {output1}
       </pre>
     </>
   )
