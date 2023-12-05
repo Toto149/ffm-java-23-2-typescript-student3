@@ -22,7 +22,7 @@ function printStudentNameAndGrades(student :Student) : string {
   return nameAgeGrades;
 }
 
-function printStudentNameSubjectsAndGrades2(student :StudentRefactor) : string {
+function printStudentNameSubjectsAndGrades(student :StudentRefactor) : string {
   let nameAgeSubjectsGrades : string = "";
   nameAgeSubjectsGrades = student.firstName + " " + student.lastName + " " + "(" + student.age + ")\n";
   nameAgeSubjectsGrades  += "=".repeat(nameAgeSubjectsGrades.length)+ "\n" + "Noten: \n";
@@ -117,7 +117,7 @@ function App() {
   students.forEach((student: Student): void => console.log(printStudentNameAndGrades(student)));
   convertingStudentGrades(student1);
   students.forEach((student: Student):void => console.log(averageGrade(student)));
-  console.log(printStudentNameSubjectsAndGrades2(student4));
+  console.log(printStudentNameSubjectsAndGrades(student4));
   const output1: string = printStudentNameAndGrades(student1);
   console.log(output1)
   return (
