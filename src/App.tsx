@@ -60,7 +60,7 @@ function App() {
   const students: Student[] = [student1,student2,student3];
   students.forEach((student: Student): void => console.log(printStudentNameAndGrades(student)));
   convertingStudentGrades(student1);
-  let output1:string = printStudentNameAndGrades(student1);
+  const output1: string = printStudentNameAndGrades(student1);
   console.log(output1)
   return (
     <>
