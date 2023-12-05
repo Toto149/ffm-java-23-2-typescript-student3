@@ -23,14 +23,14 @@ function printStudentNameAndGrades(student :Student) : string {
 }
 
 function printStudentNameSubjectsAndGrades2(student :StudentRefactor) : string {
-  let nameAgeGrades : string = "";
-  nameAgeGrades = student.firstName + " " + student.lastName + " " + "(" + student.age + ")\n";
-  nameAgeGrades  += "=".repeat(nameAgeGrades.length)+ "\n" + "Noten: \n";
+  let nameAgeSubjectsGrades : string = "";
+  nameAgeSubjectsGrades = student.firstName + " " + student.lastName + " " + "(" + student.age + ")\n";
+  nameAgeSubjectsGrades  += "=".repeat(nameAgeSubjectsGrades.length)+ "\n" + "Noten: \n";
   for(let i:number=0; i<student.subjects.length;i++){
-    nameAgeGrades += student.subjects[i].nameOfSubject +": " + gradesToString(student.subjects[i].gradesOfSubject) + "\n";
+    nameAgeSubjectsGrades += student.subjects[i].nameOfSubject +": " + gradesToString(student.subjects[i].gradesOfSubject) + "\n";
   }
 
-  return nameAgeGrades;
+  return nameAgeSubjectsGrades;
 }
 
 
