@@ -4,3 +4,10 @@ type Student = {
     age: number,
     grades: Grade[];
 }
+
+type StudentRefactor = {
+    firstName : string,
+    lastName : string,
+    age : number,
+    subjects: Subject[];
+}
